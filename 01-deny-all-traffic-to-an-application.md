@@ -21,7 +21,7 @@ Run a nginx Pod with labels `app=web`  and expose it at port 80:
 
 Run a temporary Pod and make a request to `web` Service:
 
-    $ kubectl run  test --rm -i -t --image=alpine test-$RANDOM -- sh
+    $ kubectl run  test --rm -i -t --image=alpine -- sh
     / # wget -qO- http://web
     <!DOCTYPE html>
     <html>
@@ -52,7 +52,7 @@ networkpolicy "web-deny-all" created
 
 Run a test container again, and try to query web:
 
-    $ kubectl run test2 --rm -i -t --image=alpine test-$RANDOM -- sh
+    $ kubectl run test2 --rm -i -t --image=alpine  -- sh
     / # wget -qO- --timeout=2 http://web
     wget: download timed out
 
