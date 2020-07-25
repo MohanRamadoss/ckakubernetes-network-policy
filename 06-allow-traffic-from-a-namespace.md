@@ -16,7 +16,7 @@ choose particular namespaces.
 
 Run a web server in the `default` namespace:
 
-    kubectl run --generator=run-pod/v1 web --image=nginx \
+    kubectl run  web --image=nginx \
         --labels=app=web --expose --port 80
 
 Now, suppose you have these three namespaces:
