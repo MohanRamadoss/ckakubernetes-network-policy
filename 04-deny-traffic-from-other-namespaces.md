@@ -22,7 +22,7 @@ Create a new namespace called `secondary` and start a web service:
 ```sh
 kubectl create namespace secondary
 
-kubectl run  web --namespace secondary --image=nginx --labels=app=web --expose --port 80  ```
+kubectl run  web --namespace secondary --image=nginx --labels=app=web --expose --port 80 
 
 Save the following manifest to `deny-from-other-namespaces.yaml` and apply
 to the cluster:
