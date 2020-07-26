@@ -27,7 +27,8 @@ kubectl run  web --namespace secondary --image=nginx --labels=app=web --expose -
 Save the following manifest to `deny-from-other-namespaces.yaml` and apply
 to the cluster:
 
-```yaml
+yaml
+
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
